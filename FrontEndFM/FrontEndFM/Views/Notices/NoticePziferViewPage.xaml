@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:FrontEndFM.Controls"
+             BackgroundColor="Transparent"
+             x:Class="FrontEndFM.Views.Notices.NoticePziferViewPage">
+  <ContentView.Content  >
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.45*" ></RowDefinition>
+                <RowDefinition Height="0.55*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Frame Grid.Row="0"
+                   CornerRadius="10"
+                   BackgroundColor="White"
+                   Opacity="1"
+                   Grid.Column="0">
+
+            </Frame>
+            <Frame Grid.Row="0"
+                   Grid.RowSpan="2"
+                   CornerRadius="10"
+                   BackgroundColor="White"
+                   Opacity="0.5"
+                   Grid.Column="0">
+                
+            </Frame>
+            <Image Source="phones.png"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   
+                   Aspect="AspectFit"></Image>
+            <Grid Grid.Row="1" Padding="20,20,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="Auto" ></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                <Label Text="Digital Platform&#10;for Pfizer"
+                       FontFamily="DMFont"
+                       FontSize="Small"
+                       TextColor="Black">
+                    
+                </Label>
+                <Line WidthRequest="30"
+                      Grid.Row="1"
+                      HorizontalOptions="Start"
+                      BackgroundColor="Black"
+                      HeightRequest="0.1"
+                      Opacity="0.6"
+                      Margin="0,5,0,5"
+                      ></Line>
+
+                <Label Text="Give the Hability to the content administrator to create, edit, and delete the desired commercial content in a technological solution, and allow the users to download and work online or offline with the content, were the two main challenges we had."
+                       FontFamily="RubikFont"
+                       Grid.Row="2"
+                       FontSize="8"
+                       TextColor="Black">
+                    
+                </Label>
+                <controls:ButtonControl Grid.Row="3"
+                        HeightRequest="30"
+                        Text="View Project"
+                        FontFamily="DMFont"
+                        FontSize="Micro"
+                        BackgroundColor="White"
+                        HorizontalOptions="Start"
+                        Margin="0,0,0,20"
+                                        TextColor="#29ABE1"
+                                        
+                                        CornerRadius="40"
+                        WidthRequest="130"></controls:ButtonControl>
+            </Grid>
+        </Grid>
+  </ContentView.Content>
+</ContentView>

@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:TemplateSelector="clr-namespace:FrontEndFM.DataTemplatesSelector" 
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms" 
+             xmlns:controls="clr-namespace:FrontEndFM.Controls" xmlns:notices="clr-namespace:FrontEndFM.Views.Notices"
+             x:Class="FrontEndFM.Views.Principal.MainPage">
+    
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Spacing="0" >
+
+                <StackLayout BackgroundColor="#B3DDD8"
+                             Style="{x:StaticResource Container}">
+                    <forms:SvgCachedImage Grid.Row="0"
+                                          Aspect="AspectFit"   
+                                          WidthRequest="120"                                          
+                                          Source="logofonkiem.svg"  />
+                    <Line BackgroundColor="Black"
+                          WidthRequest="70"
+                          Style="{x:StaticResource DivisionLine}"
+                          ></Line>
+                    <Label Text="Expert Samurais&#10;on Develop Secure apps&#10;with Sensitive data. "                          
+                           Margin="0,10,0,15"
+                           Style="{x:StaticResource Header}"
+                           >
+
+                    </Label>
+                    <Label Text="We are samurais code monkeys that masters the most recent data security protocols, encrypted methodologies and Blockchain development."
+                           Margin="0,10,0,15"
+                           Style="{x:StaticResource SmallText}">
+
+                    </Label>
+                    <controls:ButtonControl Margin="0,10,0,0"                                            
+                                             xct:ShadowEffect.Color="Gray"
+                                            xct:ShadowEffect.Radius="1"
+                                            xct:ShadowEffect.OffsetY="+10"
+                                            xct:ShadowEffect.Opacity="1"
+                                            Command="{Binding CreateEmailCommand}"
+                                            Style="{x:StaticResource GetInTouchButton}"
+                                            >
+                        
+                    </controls:ButtonControl>                   
+                </StackLayout>
+            
+                <StackLayout Margin="0,0,0,0" Padding="0,0,0,40" Spacing="0" HeightRequest="700" VerticalOptions="FillAndExpand" Background="#AAAACC">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition ></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <forms:SvgCachedImage Grid.Row="0"
+                                              Aspect="AspectFit" 
+                                              BackgroundColor="Transparent"
+                                              HeightRequest="500"
+                                              Margin="0,-300,0,-0"
+                                              Grid.ColumnSpan="2"
+                                              VerticalOptions="End"
+                                              Source="FoonkieU.svg"  />
+
+                        <controls:ButtonControl Grid.Column="1"
+                                                xct:ShadowEffect.Color="White"
+                                                xct:ShadowEffect.Radius="3"
+                                                xct:ShadowEffect.OffsetY="-2"
+                                                xct:ShadowEffect.OffsetX="-2"                                                
+                                                xct:ShadowEffect.Opacity="25"
+                                                Style="{x:StaticResource NavBarButton}">
+
+                        </controls:ButtonControl>
+
+                    </Grid>
+                    <Grid Margin="0,-40,0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.15*"></ColumnDefinition>
+                            <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                            <ColumnDefinition Width="0.15*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <controls:ButtonControl Grid.Column="0"
+                                                xct:ShadowEffect.Color="White"                                                
+                                                xct:ShadowEffect.Radius="3"
+                                                xct:ShadowEffect.OffsetY="-2"
+                                                Command="{Binding PrevNoticeCommand}"
+                                                xct:ShadowEffect.OffsetX="-2"
+                                                xct:ShadowEffect.Opacity="25"
+                                                Text="&#xf104;"
+                                                Style="{x:StaticResource NextAndPrevCarousel}">
+
+                        </controls:ButtonControl>
+                        <StackLayout Grid.Column="1"  VerticalOptions="Start">
+                            <Label Text="Case studies"
+                                   FontFamily="RubikFont"
+                                   TextColor="White"
+                                   FontSize="Micro"
+                                   HorizontalTextAlignment="Start">
+                            </Label>
+                            <Line HeightRequest="0.1"
+                                  BackgroundColor="White"
+                                  WidthRequest="70"
+                                  Margin="0,10,0,10"
+                                  HorizontalOptions="Start"
+                                  Style="{x:StaticResource DivisionLine}">
+
+                            </Line>
+                            <CarouselView
+                              Loop="False"
+                                IsScrollAnimated="True"
+                                HorizontalOptions="FillAndExpand"
+                           Position="{Binding SelectedNoticeIndex}"
+                                VerticalOptions="FillAndExpand">
+                                <CarouselView.ItemsSource>
+                                    <x:Array Type="{x:Type ContentView}">
+                                        <notices:NoticePziferViewPage />
+                                        <notices:NoticeTakedaViewPage />
+                                        <notices:NoticeBostonViewPage />
+                                        <notices:NoticeBSJIViewPage />
+
+                                    </x:Array>
+                                </CarouselView.ItemsSource>
+                                <CarouselView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ContentView Content="{Binding .}" />
+                                    </DataTemplate>
+                                </CarouselView.ItemTemplate>
+                            </CarouselView>
+
+
+                        </StackLayout>
+                        <controls:ButtonControl Grid.Column="2"                                                  
+                                                Command="{Binding NextNoticeCommand}"                                                
+                                                xct:ShadowEffect.Color="White"                                               
+                                                Text="&#xf105;"                                                 
+                                                xct:ShadowEffect.Radius="3"
+                                                xct:ShadowEffect.OffsetY="-2"
+                                                xct:ShadowEffect.OffsetX="-2"
+                                                xct:ShadowEffect.Opacity="25"
+                                                Style="{x:StaticResource NextAndPrevCarousel}">
+
+                        </controls:ButtonControl>
+
+
+                    </Grid>
+                    <StackLayout HeightRequest="100">
+                        <CollectionView x:Name="coleccion" ItemsSource="{Binding MenuItems}" 
+                                        Margin="0,30,0,0" 
+                                        
+                                        
+                                            
+                            ItemsLayout="VerticalGrid, 4"  
+                                            VerticalOptions="End"
+                                            SelectionMode="Single">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid VerticalOptions="Center" >
+                                        <Grid.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Source={x:Reference coleccion}, 
+                                                    Path=BindingContext.ChangeMenuCommand}" CommandParameter="{Binding .}" ></TapGestureRecognizer>
+                                        </Grid.GestureRecognizers>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="1"></RowDefinition>
+                                                <RowDefinition Height="*"></RowDefinition>
+                                            </Grid.RowDefinitions>
+
+                                            <Line Grid.Row="0"
+                                                  IsVisible="{Binding isselected, Mode=TwoWay}"
+                                                  Style="{x:StaticResource NavBarCarouselLine}"/>
+
+                                            <Label Grid.Row="1" 
+                                                   Text="{Binding tittle}" 
+                                                   TextColor="{Binding Color}"
+                                                   Style="{x:StaticResource NavBarCarouselLabel}">                                                
+                                                
+                                            </Label>
+
+                                        </Grid>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                    </StackLayout>
+
+
+
+
+                </StackLayout>
+                <StackLayout Margin="0,0,0,0" Padding="0,0,0,40" Spacing="0" VerticalOptions="FillAndExpand" Background="#29ABE1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                            <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <forms:SvgCachedImage Grid.Column="0"
+                                          Grid.ColumnSpan="2"
+                                          Aspect="AspectFit" 
+                                          BackgroundColor="Transparent"
+                                          HeightRequest="300"
+                                          Margin="0,-40,0,0"
+                                          HorizontalOptions="Start"                                          
+                                          VerticalOptions="Start"
+                                          Source="FoonkieUTwo.svg"  />
+                        <StackLayout Grid.Column="1" 
+                                     HorizontalOptions="End"                                     
+                                     Padding="0,60,20,0">
+                            <Label Text=" Let's work&#10;together!"
+                                   FontFamily="DMFont"
+                                   HorizontalOptions="End"
+                                   HorizontalTextAlignment="End"
+                                   FontSize="Small"
+                                   TextColor="White">
+                                
+                            </Label>
+                            <controls:ButtonControl Command="{Binding CreateEmailCommand}"
+                                                    Style="{x:StaticResource GetInTouchButton}"
+                                                    HeightRequest="30"
+                                                    FontSize="11"
+                                                    HorizontalOptions="End"
+                                                    WidthRequest="120"
+                                                    Margin="0,20,0,0"
+                                                    xct:ShadowEffect.Color="Gray"
+                                                    xct:ShadowEffect.Radius="1"
+                                                    xct:ShadowEffect.OffsetY="+10"
+                                                    xct:ShadowEffect.Opacity="1">
+                                
+                            </controls:ButtonControl>
+                            <Line HeightRequest="0.1"
+                                  WidthRequest="40"
+                                  Margin="0,30,0,0"
+                                  HorizontalOptions="End"
+                                  BackgroundColor="White">
+                                
+                            </Line>
+                            <forms:SvgCachedImage Grid.Row="0"
+                                                  Aspect="AspectFit"   
+                                                  BackgroundColor="Transparent"
+                                                  WidthRequest="120" HorizontalOptions="End"
+                                                  Margin="0,30,0,0"
+                                                  Source="logofonkiem.svg"  />
+                            <Label HorizontalTextAlignment="End" Margin="0,20,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Bogotá:" FontSize="Micro" FontFamily="RubikFontSB" ForegroundColor="White" />
+                                        <Span Text="&#10;Calle 106 # 54-15 of.307/308" FontSize="Body" FontFamily="RubikFont" ForegroundColor="White" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label HorizontalTextAlignment="End" Margin="0,20,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Harpenden, UK:" FontSize="Micro" FontFamily="RubikFontSB" ForegroundColor="White" />
+                                        <Span Text="&#10;Harpenden Hall, Southdown Rd" FontSize="Body" FontFamily="RubikFont" ForegroundColor="White" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label HorizontalTextAlignment="End" Margin="0,20,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Miami, USA:" FontSize="Micro" FontFamily="RubikFontSB" ForegroundColor="White" />
+                                        <Span Text="&#10;990 Biscayne Blvd #501" FontSize="Body" FontFamily="RubikFont" ForegroundColor="White" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Line WidthRequest="80"
+                                  Margin="0,20,0,20"
+                                  HeightRequest="0.1"
+                                  BackgroundColor="White"
+                                  Opacity="0.7"
+                                  HorizontalOptions="End"
+                                  ></Line>
+                            <Label HorizontalTextAlignment="End" >
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Foonkie Monkey 2021" FontSize="Micro" FontFamily="RubikFont" ForegroundColor="White" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+
+                        </StackLayout>
+                    </Grid>
+                   
+                </StackLayout>         
+        </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

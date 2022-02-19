@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndFM.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="FirstColor">#B3DDD8</Color>
+            <Color x:Key="SecondColor">#AAAACC</Color>
+            <Color x:Key="ThirdColor">#29ABE1</Color>
+            <!--containers-->
+            <Style x:Key="Container" TargetType="StackLayout">
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                <Setter Property="Padding" Value="15,30,15,0" />
+                <Setter Property="HeightRequest" Value="700" />
+            </Style>
+
+            <!--linea division-->
+            <Style x:Key="DivisionLine" TargetType="Line">
+                <Setter Property="HeightRequest" Value="0.1" />
+                <Setter Property="Margin" Value="0,25,0,0" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <!--Encabezados-->
+            <Style x:Key="Header" TargetType="Label">
+                <Setter Property="FontFamily" Value="DMFont" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+
+            <!--Texto Pequeño-->
+            <Style x:Key="SmallText" TargetType="Label">
+                <Setter Property="FontFamily" Value="RubikFont" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="Micro" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+
+            <!--Boton Get In Touch-->
+            <Style x:Key="GetInTouchButton" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="CornerRadius" Value="30" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HeightRequest" Value="45" />
+                <Setter Property="FontFamily" Value="DMFont" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="TextColor" Value="#29ABE1" />
+                <Setter Property="WidthRequest" Value="150" />
+                <Setter Property="Text" Value="Get In Touch" />
+                
+            </Style>
+
+            <!--Boton NavBar (no tiene funcion)-->
+            <Style x:Key="NavBarButton" TargetType="Button">
+                <Setter Property="HeightRequest" Value="70" />
+                <Setter Property="WidthRequest" Value="70" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="Margin" Value="0,-35,20,0"     />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="TextColor" Value="#29ABE1" />
+                <Setter Property="CornerRadius" Value="70" />
+                <Setter Property="FontFamily" Value="FontAwe" />
+                <Setter Property="Text" Value="&#xf0c9;" />
+            </Style>
+
+            <!--Botones anterior y siguiente carousel-->
+            <Style x:Key="NextAndPrevCarousel" TargetType="Button">
+                <Setter Property="HeightRequest" Value="30" />
+                <Setter Property="WidthRequest" Value="30" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="Margin" Value="0,0,0,0"     />
+                <Setter Property="FontSize" Value="11" />
+                <Setter Property="TextColor" Value="#29ABE1" />
+                <Setter Property="CornerRadius" Value="70" />
+                <Setter Property="FontFamily" Value="FontAwe" />
+                <Setter Property="BorderWidth" Value="1" />
+            </Style>
+
+            <!--Botones barra de navegacion  carousel-->
+            <Style x:Key="NavBarCarouselLine" TargetType="Line">
+                <Setter Property="VerticalOptions" Value="End" />
+                <Setter Property="HeightRequest" Value="0.5" />
+                <Setter Property="Margin" Value="10,0,10,0" />
+                <Setter Property="BackgroundColor" Value="Black" />
+                
+            </Style>
+
+            <!--Botones barra de navegacion  carousel-->
+            <Style x:Key="NavBarCarouselLabel" TargetType="Label">
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="VerticalTextAlignment" Value="Start" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="FontFamily" Value="DMFont" />
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+
+            </Style>
+
+           
+           
+
+
+            <Style x:Key="Logo" TargetType="Image">
+                <Setter Property="Margin" Value="0,-20,0,0" />
+
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
+        </ResourceDictionary>
+        
+        <!--logofm-->
+
+    </Application.Resources>
+</Application>

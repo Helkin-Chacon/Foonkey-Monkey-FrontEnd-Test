@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d9deda89-dd0d-4672-b5cb-8a28f35b8b95": {
+      "ProjectGuid": "d9deda89-dd0d-4672-b5cb-8a28f35b8b95",
+      "DisplayName": "FrontEndFM",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
+    },
+    "5fa24590-545c-491e-b59e-a8243c48afe2": {
+      "ProjectGuid": "5fa24590-545c-491e-b59e-a8243c48afe2",
+      "DisplayName": "FrontEndFM.Android",
+      "ColorIndex": 1
+    },
+    "8a8329ae-be5c-4309-916f-23669448d3ba": {
+      "ProjectGuid": "8a8329ae-be5c-4309-916f-23669448d3ba",
+      "DisplayName": "FrontEndFM.iOS",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
